@@ -1,0 +1,212 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* Base Reset & Typography */\
+*, *::before, *::after \{\
+    box-sizing: border-box;\
+    margin: 0;\
+    padding: 0;\
+\}\
+\
+body \{\
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;\
+    line-height: 1.6;\
+    color: #333;\
+    background: #fafafa;\
+    display: flex;\
+    flex-direction: column;\
+    min-height: 100vh;\
+\}\
+\
+.container \{\
+    max-width: 800px;\
+    margin: 0 auto;\
+    padding: 0 20px;\
+\}\
+\
+/* Header */\
+header \{\
+    background: #1a365d;  /* deep navy */\
+    color: #fff;\
+    padding: 2rem 0 1rem;\
+    margin-bottom: 2rem;\
+\}\
+\
+header h1 \{\
+    font-size: 2.2rem;\
+    margin-bottom: 0.3rem;\
+\}\
+\
+header .subtitle \{\
+    font-weight: 300;\
+    font-size: 1.1rem;\
+    color: #cbd5e0;\
+\}\
+\
+nav \{\
+    margin-top: 1.2rem;\
+    display: flex;\
+    gap: 1.5rem;\
+\}\
+\
+nav a \{\
+    color: #bee3f8;\
+    text-decoration: none;\
+    font-weight: 500;\
+    padding-bottom: 0.2rem;\
+    border-bottom: 2px solid transparent;\
+\}\
+\
+nav a:hover,\
+nav a.active \{\
+    border-bottom-color: #63b3ed;\
+    color: #fff;\
+\}\
+\
+/* Main content */\
+main \{\
+    flex: 1;\
+    margin-bottom: 3rem;\
+\}\
+\
+h2 \{\
+    margin: 1.5rem 0 0.8rem;\
+    color: #1a365d;\
+\}\
+\
+.intro p \{\
+    font-size: 1.1rem;\
+    margin-bottom: 1rem;\
+\}\
+\
+/* Post list on home page */\
+.post-list \{\
+    list-style: none;\
+    padding: 0;\
+\}\
+\
+.post-list li \{\
+    border-bottom: 1px solid #e2e8f0;\
+    padding: 0.8rem 0;\
+\}\
+\
+.post-date \{\
+    font-size: 0.85rem;\
+    color: #718096;\
+    display: block;\
+    margin-bottom: 0.2rem;\
+\}\
+\
+.post-list a \{\
+    font-size: 1.15rem;\
+    font-weight: 600;\
+    text-decoration: none;\
+    color: #2b6cb0;\
+\}\
+\
+.post-list a:hover \{\
+    text-decoration: underline;\
+\}\
+\
+.post-excerpt \{\
+    margin-top: 0.3rem;\
+    color: #4a5568;\
+\}\
+\
+/* About page */\
+.about-content \{\
+    display: flex;\
+    gap: 2rem;\
+    flex-wrap: wrap;\
+    margin-top: 1rem;\
+\}\
+\
+.profile-pic \{\
+    border-radius: 8px;\
+    width: 150px;\
+    height: 150px;\
+    object-fit: cover;\
+\}\
+\
+.about-content div \{\
+    flex: 1;\
+    min-width: 250px;\
+\}\
+\
+.about-content ul \{\
+    list-style: none;\
+    padding: 0;\
+\}\
+\
+.about-content li \{\
+    margin-bottom: 0.3rem;\
+\}\
+\
+/* Blog post */\
+.blog-post h1 \{\
+    font-size: 2rem;\
+    margin-bottom: 0.5rem;\
+    color: #1a365d;\
+\}\
+\
+.post-meta \{\
+    color: #718096;\
+    margin-bottom: 1.5rem;\
+    font-size: 0.95rem;\
+\}\
+\
+.blog-post h2 \{\
+    border-bottom: 1px solid #e2e8f0;\
+    padding-bottom: 0.3rem;\
+    margin-top: 2rem;\
+\}\
+\
+.blog-post p \{\
+    margin-bottom: 1rem;\
+\}\
+\
+pre \{\
+    background: #edf2f7;\
+    padding: 1rem;\
+    overflow-x: auto;\
+    border-radius: 6px;\
+    margin: 1.5rem 0;\
+\}\
+\
+code \{\
+    font-family: 'Fira Code', 'Consolas', monospace;\
+    font-size: 0.9rem;\
+\}\
+\
+/* Footer */\
+footer \{\
+    background: #1a365d;\
+    color: #cbd5e0;\
+    text-align: center;\
+    padding: 1.5rem 0;\
+    margin-top: auto;\
+\}\
+\
+footer a \{\
+    color: #bee3f8;\
+    text-decoration: none;\
+\}\
+\
+footer a:hover \{\
+    text-decoration: underline;\
+\}\
+\
+/* Responsive tweaks */\
+@media (max-width: 600px) \{\
+    .about-content \{\
+        flex-direction: column;\
+    \}\
+    nav \{\
+        flex-wrap: wrap;\
+        gap: 1rem;\
+    \}\
+\}}
