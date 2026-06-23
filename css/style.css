@@ -203,3 +203,31 @@ footer a:hover {
         gap: 1rem;
     }
 }
+/* Publications list */
+.publication-list {
+    padding-left: 1.5rem;
+}
+
+.publication-list li {
+    margin-bottom: 1.8rem;
+}
+
+.publication-list a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #2b6cb0;
+}
+
+.publication-list a:hover {
+    text-decoration: underline;
+}
+
+.authors {
+    color: #4a5568;
+}
+
+.journal {
+    color: #718096;
+    font-size: 0.95rem;
+}
