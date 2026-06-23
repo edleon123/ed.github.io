@@ -231,3 +231,68 @@ footer a:hover {
     color: #718096;
     font-size: 0.95rem;
 }
+
+/* ===== Mobile & Responsive Fixes ===== */
+
+/* Keep header/footer background full‑width even when zoomed out */
+header, footer {
+    min-width: 100vw;
+    width: 100%;
+}
+
+/* Make code blocks horizontally scrollable without breaking layout */
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;       /* wrap long lines if possible */
+    word-break: break-all;       /* break very long words */
+    -webkit-overflow-scrolling: touch;
+}
+
+code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Reduce blog title size on small screens */
+@media (max-width: 600px) {
+    .blog-post h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-post h2 {
+        font-size: 1.2rem;
+    }
+
+    .blog-post p,
+    .blog-post li {
+        font-size: 1rem;
+    }
+
+    /* Prevent the container from being wider than the screen */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+        overflow-wrap: break-word;
+    }
+
+    /* Make the header stack neatly */
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header .subtitle {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    /* Fix any element that might overflow */
+    img, pre, code, table {
+        max-width: 100%;
+        height: auto;
+    }
+}
