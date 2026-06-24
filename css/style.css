@@ -1,4 +1,6 @@
-/* Base Reset & Typography */
+/* =============================================
+   1. Reset & Base
+   ============================================= */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -15,18 +17,29 @@ body {
     min-height: 100vh;
 }
 
+/* =============================================
+   2. Layout
+   ============================================= */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
+main {
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+/* =============================================
+   3. Header
+   ============================================= */
 header {
-    background: #1a365d;  /* deep navy */
+    background: #1a365d;
     color: #fff;
     padding: 2rem 0 1rem;
     margin-bottom: 2rem;
+    min-width: 100vw;    /* full width even when zoomed out */
 }
 
 header h1 {
@@ -40,6 +53,9 @@ header .subtitle {
     color: #cbd5e0;
 }
 
+/* =============================================
+   4. Navigation
+   ============================================= */
 nav {
     margin-top: 1.2rem;
     display: flex;
@@ -60,23 +76,23 @@ nav a.active {
     color: #fff;
 }
 
-/* Main content */
-main {
-    flex: 1;
-    margin-bottom: 3rem;
-}
-
+/* =============================================
+   5. General Typography & Headings
+   ============================================= */
 h2 {
     margin: 1.5rem 0 0.8rem;
     color: #1a365d;
 }
 
+/* =============================================
+   6. Home Page
+   ============================================= */
 .intro p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
-/* Post list on home page */
+/* Post list */
 .post-list {
     list-style: none;
     padding: 0;
@@ -110,7 +126,19 @@ h2 {
     color: #4a5568;
 }
 
-/* About page */
+/* Intro image */
+.intro-image {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 1.5rem auto 0 auto;
+    border-radius: 8px;
+}
+
+/* =============================================
+   7. About Page
+   ============================================= */
 .about-content {
     display: flex;
     gap: 2rem;
@@ -120,7 +148,7 @@ h2 {
 
 .profile-pic {
     border-radius: 8px;
-    width: 250px;
+    width: 250px;          /* increased size */
     height: 250px;
     object-fit: cover;
     max-width: 100%;
@@ -132,6 +160,15 @@ h2 {
     min-width: 250px;
 }
 
+.about-content p {
+    margin-bottom: 1.5rem;   /* more space between paragraphs */
+}
+
+.about-content h3 {
+    margin-top: 2rem;        /* space before Contact */
+    margin-bottom: 0.5rem;
+}
+
 .about-content ul {
     list-style: none;
     padding: 0;
@@ -141,7 +178,9 @@ h2 {
     margin-bottom: 0.3rem;
 }
 
-/* Blog post */
+/* =============================================
+   8. Blog Post
+   ============================================= */
 .blog-post h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -164,48 +203,29 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Code blocks */
 pre {
     background: #edf2f7;
     padding: 1rem;
-    overflow-x: auto;
     border-radius: 6px;
     margin: 1.5rem 0;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    -webkit-overflow-scrolling: touch;
 }
 
 code {
     font-family: 'Fira Code', 'Consolas', monospace;
     font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
-/* Footer */
-footer {
-    background: #1a365d;
-    color: #cbd5e0;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: auto;
-}
-
-footer a {
-    color: #bee3f8;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .about-content {
-        flex-direction: column;
-    }
-    nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-}
-/* Publications list */
+/* =============================================
+   9. Publications Page
+   ============================================= */
 .publication-list {
     padding-left: 1.5rem;
 }
@@ -234,81 +254,9 @@ footer a:hover {
     font-size: 0.95rem;
 }
 
-/* ===== Mobile & Responsive Fixes ===== */
-
-/* Keep header/footer background full‑width even when zoomed out */
-header, footer {
-    min-width: 100vw;
-    width: 100%;
-}
-
-/* Make code blocks horizontally scrollable without breaking layout */
-pre {
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: pre-wrap;       /* wrap long lines if possible */
-    word-break: break-all;       /* break very long words */
-    -webkit-overflow-scrolling: touch;
-}
-
-code {
-    white-space: pre-wrap;
-    word-break: break-all;
-}
-
-/* Reduce blog title size on small screens */
-@media (max-width: 600px) {
-    .blog-post h1 {
-        font-size: 1.5rem;
-    }
-
-    .blog-post h2 {
-        font-size: 1.2rem;
-    }
-
-    .blog-post p,
-    .blog-post li {
-        font-size: 1rem;
-    }
-
-    /* Prevent the container from being wider than the screen */
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-        overflow-wrap: break-word;
-    }
-
-    /* Make the header stack neatly */
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    header .subtitle {
-        font-size: 0.9rem;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-
-    /* Fix any element that might overflow */
-    img, pre, code, table {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-/* Intro section image */
-.intro-image {
-    display: block;
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    margin: 1.5rem auto 0 auto;
-    border-radius: 8px;
-}
-/* Under construction message */
+/* =============================================
+   10. Under Construction Page
+   ============================================= */
 .under-construction {
     text-align: center;
     padding: 4rem 1rem;
@@ -343,12 +291,72 @@ code {
     text-decoration: underline;
 }
 
-/* Extra spacing for About page sections */
-.about-content p {
-    margin-bottom: 1.5rem;
+/* =============================================
+   11. Footer
+   ============================================= */
+footer {
+    background: #1a365d;
+    color: #cbd5e0;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    min-width: 100vw;    /* full width even when zoomed out */
 }
 
-.about-content h3 {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+footer a {
+    color: #bee3f8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================
+   12. Responsive Tweaks (Mobile)
+   ============================================= */
+@media (max-width: 600px) {
+    /* General container */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+        overflow-wrap: break-word;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    /* About page */
+    .about-content {
+        flex-direction: column;
+    }
+
+    /* Blog post typography */
+    .blog-post h1 {
+        font-size: 1.5rem;
+    }
+    .blog-post h2 {
+        font-size: 1.2rem;
+    }
+    .blog-post p,
+    .blog-post li {
+        font-size: 1rem;
+    }
+
+    /* Prevent overflow on any element */
+    img, pre, code, table {
+        max-width: 100%;
+        height: auto;
+    }
 }
