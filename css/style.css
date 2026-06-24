@@ -342,3 +342,13 @@ code {
 .under-construction .back-link:hover {
     text-decoration: underline;
 }
+
+/* Extra spacing for About page sections */
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+.about-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
